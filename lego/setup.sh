@@ -4,7 +4,7 @@ LEGO_HOME="/userdata/lego"
 CRON_HOME="/userdata/cron"
 
 echo "Fetching CA Certificate bundle..."
-mkdir -p (dirname "${LEGO_HOME}/certs/ca-certificates.crt")
+mkdir -p "$( dirname "${LEGO_HOME}/certs/ca-certificates.crt" )"
 wget \
     -O "${LEGO_HOME}/certs/ca-certificates.crt" \
     --no-check-certificate \
