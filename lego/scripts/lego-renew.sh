@@ -15,7 +15,7 @@ set +a
 LEGO="${LEGO_HOME}/bin/lego"
 LOG_FILE="${LEGO_PATH}/logs/last.log"
 LEGO_LOG_FILE="${LEGO_PATH}/logs/lego.log"
-CERT_FILE="${LEGO_PATH}/certificates/${LEGO_CERT_NAME}"
+CERT_FILE="${LEGO_PATH}/certificates/${LEGO_CERT_NAME}.crt"
 DEPLOY_HOOK="${LEGO_HOME}/scripts/lego-deploy.sh"
 
 mkdir -p "$(dirname "${LOG_FILE}")"
