@@ -3,6 +3,13 @@
 LEGO_HOME="/userdata/lego"
 CRON_HOME="/userdata/cron"
 
+echo "Fetching CA Certificate bundle..."
+wget \
+    -O "/userdata/certs/ca-certificates.crt" \
+    --no-check-certificate \
+    "https://curl.se/ca/cacert.pem"
+
+
 if [ ! -h "/etc/init.d/S22cron" ]; then
     ln -s "${LEGO_HOME}/init.d/S22cron" "/etc/init.d/S22cron"
 fi
