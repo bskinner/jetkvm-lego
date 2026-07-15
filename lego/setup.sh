@@ -5,7 +5,7 @@ CRON_HOME="/userdata/cron"
 
 echo "Fetching CA Certificate bundle..."
 wget \
-    -O "/userdata/certs/ca-certificates.crt" \
+    -O "${LEGO_HOME}/certs/ca-certificates.crt" \
     --no-check-certificate \
     "https://curl.se/ca/cacert.pem"
 

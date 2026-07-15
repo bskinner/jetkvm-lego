@@ -3,10 +3,10 @@
 set -e
 set -o pipefail
 
-export SSL_CERT_FILE="/userdata/certs/ca-certificates.crt"
-
 LEGO_HOME="${LEGO_HOME:-/userdata/lego}"
 LEGO_ENV_FILE="${LEGO_HOME}/.env.cf"
+
+export SSL_CERT_FILE="${LEGO_HOME}/certs/ca-certificates.crt"
 
 set -a
 source "${LEGO_HOME}/.env"
