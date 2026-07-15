@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ ! -d /var/spool/cron ]; then
+    mkdir /var/spool/cron
+    ln -s /userdata/cron/ /var/spool/cron/crontabs
+    crond
+fi

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+LEGO_HOME="/userdata/lego"
+LEGO_RENEW_SCRIPT="$LEGO_HOME/scripts/lego-renew.sh"
+
+if [ -x "$LEGO_RENEW_SCRIPT" ]; then
+    "$LEGO_RENEW_SCRIPT"
+fi
